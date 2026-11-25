@@ -1,9 +1,16 @@
 import Home from "./pages/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import BrowseBooks from "./pages/BrowseBooks";
 function App() {
   return (
-    <div className="bookloop">
-      <Home></Home>
-    </div>
+    <BrowserRouter>
+      <div className="bookloop">
+        <Routes>
+          <Route path="/" element={<Home />} />
+         <Route path="/browse-books" element={<BrowseBooks />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
