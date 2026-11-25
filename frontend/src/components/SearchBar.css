@@ -1,0 +1,20 @@
+.btn-search {
+  padding: 10px 25px;
+  background-color: #26352d !important;
+  color: white !important;
+  border: none;
+}
+
+.btn-search:hover {
+  background-color: #355343 !important;
+  color: white !important;
+}
+
+.input-group .form-control:focus {
+  border-color: #26352d;
+  box-shadow: 0 0 0 0.15rem rgba(38, 53, 45, 0.15);
+}
+
+.contaainer{
+  margin-top:3px ;
+}
