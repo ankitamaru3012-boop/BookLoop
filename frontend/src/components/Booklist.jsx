@@ -11,7 +11,7 @@ function BookList({ books }) {
 
       <div className="row g-4">
         {books.map((book) => (
-          <div className="col-md-4" key={book.id}>
+          <div className="col-md-4" key={book.book_id}>
             <div className="bookcard h-100">
 
               <div className="book-cover">
@@ -26,12 +26,12 @@ function BookList({ books }) {
                 <p className="book-author">By {book.author}</p>
 
                 <div className="book-type">
-                  {book.type}
+                  {book.book_type}
                 </div>
 
                 <div className="book-bottom">
                   <span className="book-price">
-                    {book.price === 0 ? "Free" : `₹${book.price}`}
+                   {Number(book.price) === 0 ? "Free" : `₹${book.price}`}
                   </span>
                   <span className="book-label">Available</span>
                 </div>

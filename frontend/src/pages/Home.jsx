@@ -6,9 +6,21 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import books from "../data/book";
 import { useState } from "react";
+import { useEffect } from "react";
 import BookList from "../components/Booklist";
+import axios from "axios";
 function Home() {
-  const [searchTerm,setSearchTerm]=useState("");
+  const [books, setBooks] = useState([]);
+const [searchTerm, setSearchTerm] = useState("");
+useEffect(() => {
+  axios.get("http://localhost/BookLoop/backend/api/get_books.php")
+    .then((response) => {
+      setBooks(response.data);
+    })
+    .catch((error) => {
+      console.log("Error fetching books:", error);
+    });
+}, []);
   const filteredBooks = books.filter((book) =>
   book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
   book.author.toLowerCase().includes(searchTerm.toLowerCase())

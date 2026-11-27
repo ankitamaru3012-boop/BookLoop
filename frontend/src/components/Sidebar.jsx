@@ -16,7 +16,9 @@ function Sidebar() {
         <li>Exchange</li>
         <li>Donation</li>
         <li>Low-cost Selling</li>
-        <li>List a Book</li>
+        <li>
+          <Link to="/list-book">List a Book</Link>
+        </li>
         <li>My Requests</li>
       </ul>
     </aside>
